@@ -12,5 +12,5 @@ model {
     flips[i] ~ bernoulli(p);
   }
 
-  p ~ beta(2.0,2.0);
+  p ~ beta(2.0,4.0);
 }
