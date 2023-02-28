@@ -24,10 +24,10 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.csvService = exports.cmdService = void 0;
-const cmd_1 = require("twinica-lib/dist/services/cmd");
+const cmd_1 = require("twinica-lib/services/cmd");
 const child_process_1 = require("child_process");
 const fs = __importStar(require("fs"));
-const csv_1 = require("twinica-lib/dist/services/csv");
+const csv_1 = require("twinica-lib/services/csv");
 exports.cmdService = new cmd_1.CmdService(child_process_1.spawn);
 exports.csvService = new csv_1.CsvService(fs);
 //# sourceMappingURL=services.js.map
