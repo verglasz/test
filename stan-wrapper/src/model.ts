@@ -1,7 +1,7 @@
 import { compile } from "./setup/compile";
 import path from "path";
 import fsp from "fs/promises";
-import { Logger } from "twinica-lib/logging";
+import { Logger, LogLevel } from "twinica-lib/logging";
 import {
   EnvParams,
   InputUpdates,
@@ -22,6 +22,7 @@ class StanModelController
   constructor(env: EnvParams, params: ModelParameters) {
     this.log = env.log;
     this.cwd = env.cwd;
+    this.log.setLevel(LogLevel.DEBUG);
     this.log.debug("Initializing model controller with params:", params);
     this.exampleNum = params.exampleNum;
   }

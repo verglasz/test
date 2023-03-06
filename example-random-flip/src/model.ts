@@ -1,5 +1,5 @@
 import { Timestamped } from "twinica-lib/common";
-import { Logger } from "twinica-lib/logging";
+import { Logger, LogLevel } from "twinica-lib/logging";
 import {
   InputUpdates,
   ModelController,
@@ -12,6 +12,7 @@ class ExampleModelController
 {
   exampleNum: number;
   constructor(private log: Logger, params: Parameters) {
+    this.log.setLevel(LogLevel.DEBUG);
     log.debug("Initializing model controller with params:", params);
     this.exampleNum = params.exampleNum;
   }
