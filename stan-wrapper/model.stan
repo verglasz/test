@@ -11,6 +11,7 @@ model {
   for(i in 1:N) {
     flips[i] ~ bernoulli(p);
   }
+  
 
   p ~ beta(2.0,2.0);
 }
