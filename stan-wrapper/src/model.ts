@@ -62,13 +62,7 @@ class StanModelController
     const avg = p.reduce((a, b) => a + b) / p.length;
     return avg;
   }
-
-  /**
-   * Run the model with the given data file, resolving to the execution result
-   * (or to undefined if the model isn't ready).
-   * This builds a command line option with the given string so it should only
-   * be called with trusted input.
-   */
+  
   uncheckedRunFile(datafile: string, outfile = "output.csv") {
     return cmdService.execute(
       path.join(this.cwd, "model"),
